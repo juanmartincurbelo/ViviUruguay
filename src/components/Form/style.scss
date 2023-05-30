@@ -1,0 +1,35 @@
+@import "../../constants/colors";
+@import "../../constants/fonts";
+@import "../../constants/sizes";
+
+.form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 1rem 0 3rem;
+  padding: 6% 9% 4.5%;
+  border-radius: 15px;
+  background-color: $third-color;
+  box-shadow: 9px 7px 41px 0 rgb(98 148 206 / 45%);
+
+  &__redirect {
+    padding: 4%;
+    color: $primary-color;
+    font-family: $font;
+    font-size: 1rem;
+
+    @media (max-width: $tablet) {
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: $phone) {
+      font-size: 0.6rem;
+    }
+
+    &--link {
+      color: $primary-color;
+      padding-left: 0.5rem;
+    }
+  }
+}

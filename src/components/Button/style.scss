@@ -1,0 +1,34 @@
+@import "../../constants/colors";
+@import "../../constants/fonts";
+@import "../../constants/sizes";
+
+.button {
+  background-color: $primary-color;
+  color: $third-color;
+  border-radius: 29px;
+  width: 8rem;
+  padding: 0.7rem;
+  margin-top: 5px;
+  font-family: $font;
+  font-weight: 700;
+
+  &:hover {
+    background-color: $darken-primary-color;
+  }
+
+  &:disabled {
+    &:hover {
+      background-color: $primary-color;
+    }
+  }
+
+  @media (max-width: $tablet) {
+    width: 7rem;
+    padding: 0.55rem;
+  }
+
+  @media (max-width: $phone) {
+    width: 6rem;
+    padding: 0.4rem;
+  }
+}

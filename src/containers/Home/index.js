@@ -45,6 +45,59 @@ const Home = () => {
 
   let canTitle = "Canelones";
   let canDescription = "Combina encanto rural y urbanismo moderno. Conocida por sus extensos viñedos y bodegas, es un paraíso para los amantes del vino. Además, cuenta con hermosos paisajes naturales, playas y una rica oferta gastronómica.";
+
+  const featuredActivities = [
+    { imageActivity: teatroActivity, title: teatroTitle, description: teatroDescription },
+    { imageActivity: yogaActivity, title: yogaTitle, description: yogaDescription },
+    { imageActivity: bodegaActivity, title: bodegaTitle, description: bodegaDescription },
+    { imageActivity: cineActivity, title: cineTitle, description: cineDescription }
+  ];
+
+  const featuredActivitiesList = featuredActivities.map(activity => (
+    <CardActivity
+      key={activity.title} // Asegúrate de proporcionar una clave única para cada elemento en la lista
+      imageActivity={activity.imageActivity}
+      title={activity.title}
+      description={activity.description}
+    />
+  ));
+
+  const locationActivities = [
+    { imageActivity: mvdActivity, title: mvdTitle, description: mvdDescription },
+    { imageActivity: pdeActivity, title: pdeTitle, description: pdeDescription },
+    { imageActivity: colActivity, title: colTitle, description: colDescription },
+    { imageActivity: canActivity, title: canTitle, description: canDescription }
+  ]
+
+  const locationActivitiesList = locationActivities.map(activity => (
+    <CardActivity
+      key={activity.title} // Asegúrate de proporcionar una clave única para cada elemento en la lista
+      imageActivity={activity.imageActivity}
+      title={activity.title}
+      description={activity.description}
+    />
+  ));
+
+  const moreActivities = [
+    { imageActivity: teatroActivity, title: teatroTitle, description: teatroDescription },
+    { imageActivity: yogaActivity, title: yogaTitle, description: yogaDescription },
+    { imageActivity: bodegaActivity, title: bodegaTitle, description: bodegaDescription },
+    { imageActivity: cineActivity, title: cineTitle, description: cineDescription },
+    { imageActivity: bodegaActivity, title: bodegaTitle, description: bodegaDescription },
+    { imageActivity: cineActivity, title: cineTitle, description: cineDescription },
+    { imageActivity: teatroActivity, title: teatroTitle, description: teatroDescription },
+    { imageActivity: yogaActivity, title: yogaTitle, description: yogaDescription },
+  ]
+
+  const moreActivitiesList = moreActivities.map(activity => (
+    <CardActivity
+      key={activity.title} // Asegúrate de proporcionar una clave única para cada elemento en la lista
+      imageActivity={activity.imageActivity}
+      title={activity.title}
+      description={activity.description}
+    />
+  ));
+
   return (
     <>
       <Navbar />
@@ -63,26 +116,7 @@ const Home = () => {
           <h1>Actividades destacadas</h1>
         </div>
         <div className="card-home-container">
-          <CardActivity
-            imageActivity={teatroActivity}
-            title={teatroTitle}
-            description={teatroDescription}
-          />
-          <CardActivity
-            imageActivity={yogaActivity}
-            title={yogaTitle}
-            description={yogaDescription}
-          />
-          <CardActivity
-            imageActivity={bodegaActivity}
-            title={bodegaTitle}
-            description={bodegaDescription}
-          />
-          <CardActivity
-            imageActivity={cineActivity}
-            title={cineTitle}
-            description={cineDescription}
-          />
+          {featuredActivitiesList}
         </div>
       </div >
 
@@ -91,26 +125,7 @@ const Home = () => {
           <h1>Principales Destinos</h1>
         </div>
         <div className="card-home-container">
-          <CardActivity
-            imageActivity={pdeActivity}
-            title={pdeTitle}
-            description={pdeDescription}
-          />
-          <CardActivity
-            imageActivity={mvdActivity}
-            title={mvdTitle}
-            description={mvdDescription}
-          />
-          <CardActivity
-            imageActivity={canActivity}
-            title={canTitle}
-            description={canDescription}
-          />
-          <CardActivity
-            imageActivity={colActivity}
-            title={colTitle}
-            description={colDescription}
-          />
+          {locationActivitiesList}
         </div>
       </div>
 
@@ -119,26 +134,8 @@ const Home = () => {
           <h1>Más Actividades</h1>
         </div>
         <div className="card-home-container">
-          <CardActivity
-            imageActivity={canActivity}
-            title={canTitle}
-            description={canDescription}
-          />
-          <CardActivity
-            imageActivity={mvdActivity}
-            title={mvdTitle}
-            description={mvdDescription}
-          />
-          <CardActivity
-            imageActivity={colActivity}
-            title={colTitle}
-            description={colDescription}
-          />
-          <CardActivity
-            imageActivity={pdeActivity}
-            title={pdeTitle}
-            description={pdeDescription}
-          />
+          {moreActivitiesList}
+          {moreActivitiesList}
         </div>
       </div>
 

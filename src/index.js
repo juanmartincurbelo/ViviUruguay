@@ -1,8 +1,19 @@
 import "./style.scss";
-console.log("Hello webpack!");
+import fondoImage from './img/fondo.jpg';
 
-const fancyFunc = () => {
-    return [1, 2];
-};
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-const [a, b] = fancyFunc();
+import { BrowserRouter } from 'react-router-dom';
+
+import App from 'Containers/App';
+
+document.documentElement.style.setProperty('--background-image-url', `url(${fondoImage})`);
+
+ReactDOM.render(
+    (
+        <BrowserRouter>
+            <App />
+        </BrowserRouter>
+    ), document.getElementById('root')
+);

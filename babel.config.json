@@ -2,5 +2,24 @@
     "presets": [
         "@babel/preset-env",
         "@babel/preset-react"
+    ],
+    "plugins": [
+        [
+            "module-resolver",
+            {
+                "root": [
+                    "./"
+                ],
+                "alias": {
+                    // "Api": "./src/api",
+                    "Components": "./src/components",
+                    "Constants": "./src/constants",
+                    "Containers": "./src/containers"
+                    // "Helpers": "./src/helpers",
+                    // "Hocs": "./src/hocs",
+                    // "Redux": "./src/redux"
+                }
+            }
+        ]
     ]
 }

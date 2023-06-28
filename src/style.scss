@@ -1,9 +1,16 @@
 @import url("https://fonts.googleapis.com/css?family=Karla:weight@400;700&display=swap");
+@import './constants/fonts.scss';
 
 $font: "Karla", sans-serif;
 $primary-color: #3e6f9e;
 
 body {
     font-family: $font;
-    color: $primary-color;
+}
+
+html {
+    background-image: var(--background-image-url), linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 1));
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
 }

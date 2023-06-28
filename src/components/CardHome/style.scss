@@ -1,0 +1,33 @@
+@import '../../constants/fonts';
+@import '../../constants/colors';
+@import "../../constants/sizes";
+
+.containerHome {
+    font-family: $font-sidebar;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardHome {
+    margin-top: 30px;
+    position: relative;
+    border-radius: 20px;
+    max-width: 600px;
+}
+
+.cardHome .contentHome h2 {
+    font-size: 4em;
+    font-weight: 900;
+    color: #ffffff;
+    line-height: 1.1em;
+    margin-bottom: 20px;
+}
+
+.cardHome .contentHome p {
+    margin-top: 0px;
+    font-size: 1.6em;
+    font-weight: 500;
+    color: #ffffff;
+    line-height: 1em;
+}

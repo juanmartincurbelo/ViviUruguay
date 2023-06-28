@@ -1,0 +1,41 @@
+@import '../../constants/colors';
+@import '../../constants/fonts';
+@import "../../constants/sizes";
+
+.card-home-top {
+    width: 100%;
+    display: flex;
+    max-width: 1500px;
+    margin: auto;
+    justify-content: space-around;
+    margin-bottom: 200px;
+}
+
+.image {
+    padding-top: 100px;
+    width: 500px;
+    height: 500px;
+    height: auto;
+}
+
+.card-home-activities {
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.card-home-activities .title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+}
+
+.card-home-container {
+    width: 100%;
+    display: flex;
+    max-width: 1300px;
+    justify-content: space-around;
+    margin: auto;
+    margin-bottom: 40px;
+    gap: 50px;
+}

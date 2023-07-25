@@ -1,0 +1,22 @@
+{
+    "app": {
+        "port": "3001",
+        "address": "http://localhost:3001/",
+        "endpoint": "/api/clients"
+    },
+    "mongo": {
+        "address": "mongodb://localhost:27017/database",
+        "db_name": "database"
+    },
+    "redis": {
+        "queue_read_channel": "purchases",
+        "host": "127.0.0.1",
+        "port": "6379",
+        "pending_purchases_queue": "pending_purchases_queue"
+    },
+    "auth_service": {
+        "address": "http://localhost:3002/api/tokens/",
+        "generate_address": "http://localhost:3002/api/tokens/generate",
+        "verify_address": "http://localhost:3002/api/tokens/verify"
+    }
+}

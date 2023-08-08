@@ -26,6 +26,9 @@ const registerProvider = async (providerData) => {
 
 const emailExists = async (email, user) => {
   try {
+    const db = mongoose.connection;
+    const Provider = db.collection('providers');
+    const Admin = db.collection('admins');
     const existingEmail = user === 'admin' ?
       await Admin.findOne({ email }) : await Provider.findOne({ email });
 
@@ -101,6 +104,8 @@ const getProvider = async (provider_id) => {
 
 const getAdmin = async (admin_id) => {
   try {
+    const db = mongoose.connection;
+    const Admin = db.collection('admins');
     const admin = await Admin.findOne({ _id: admin_id });
     return admin;
   } catch (error) {

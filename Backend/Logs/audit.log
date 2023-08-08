@@ -5,3 +5,7 @@ info: Authorized access to the system by user with email 'juanmacurbe@gmail.com'
 info: Authorized access to the system by user with email 'admin@example.com'. {"timestamp":"2023-08-08T19:35:49.392Z","userType":"Admin"}
 info: Authorized access to the system by user with email 'juanmacurbe@gmail.com'. {"timestamp":"2023-08-08T19:36:16.410Z","userType":"Provider"}
 info: Authorized access to the system by user with email 'admin@example.com'. {"timestamp":"2023-08-08T19:58:48.253Z","userType":"Admin"}
+info: Authorized access to the system by user with email 'juanmacurbe@gmail.com'. {"timestamp":"2023-08-08T20:28:59.833Z","userType":"Provider"}
+info: Unauthorized action attempt by a user who is not an Admin. {"timestamp":"2023-08-08T20:29:21.981Z"}
+info: Authorized access to the system by user with email 'admin@example.com'. {"timestamp":"2023-08-08T20:32:28.957Z","userType":"Admin"}
+info: Authorized access to the system by user with email 'admin@example.com'. {"timestamp":"2023-08-08T20:32:37.717Z","userType":"Admin"}

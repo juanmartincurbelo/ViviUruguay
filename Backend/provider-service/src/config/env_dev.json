@@ -11,18 +11,10 @@
         "queue_read_channel": "providers",
         "host": "127.0.0.1",
         "port": "6379",
-        "event_data_queue": "event_data_queue",
-        "check_authorized_queue": "check_authorized_queue"
-    },
-    "payment_gateway": {
-        "address": "http://localhost:3004/api/payments"
-    },
-    "regulatory_unit": {
-        "address": "http://localhost:3005/api/regulatory-unit"
+        "event_data_queue": "event_data_queue"
     },
     "auth_service": {
         "generate_address": "http://localhost:3002/api/tokens/generate",
         "verify_address": "http://localhost:3002/api/tokens/verify"
-    },
-    "setHoursToSendEmail": 168
+    }
 }

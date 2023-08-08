@@ -1,0 +1,7 @@
+info: Authorized access to the system by user with email 'admin@example.com'. {"timestamp":"2023-08-08T19:16:05.982Z","userType":"Admin"}
+info: Authorized access to the system by user with email 'juanmacurbe@gmail.com'. {"timestamp":"2023-08-08T19:16:23.198Z","userType":"Provider"}
+info: Authorized access to the system by user with email 'admin@example.com'. {"timestamp":"2023-08-08T19:28:41.448Z","userType":"Admin"}
+info: Authorized access to the system by user with email 'juanmacurbe@gmail.com'. {"timestamp":"2023-08-08T19:28:45.331Z","userType":"Provider"}
+info: Authorized access to the system by user with email 'admin@example.com'. {"timestamp":"2023-08-08T19:35:49.392Z","userType":"Admin"}
+info: Authorized access to the system by user with email 'juanmacurbe@gmail.com'. {"timestamp":"2023-08-08T19:36:16.410Z","userType":"Provider"}
+info: Authorized access to the system by user with email 'admin@example.com'. {"timestamp":"2023-08-08T19:58:48.253Z","userType":"Admin"}

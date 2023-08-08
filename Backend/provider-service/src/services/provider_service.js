@@ -26,7 +26,6 @@ const createEvent = async (eventData, files) => {
     const finalEvent = await addFilesInfo(event, files);
     const user = await providerRepository.getProvider(eventData.provider_id);
     const savedEvent = await providerRepository.createEvent(finalEvent, user.defaultPrice);
-
     const logEntry = createLogEntry("Event creation", user)
     logger.application(logEntry);
 
@@ -87,11 +86,6 @@ const updateFilesInfo = (event, files) => {
       const previewImagePath = path.join(event.filesRoute, event.previewImage);
       event.previewImage = files.previewImage[0].filename;
       fs.unlinkSync(previewImagePath);
-    }
-    if (files.video) {
-      const videoPath = path.join(event.filesRoute, event.video);
-      event.video = files.video[0].filename;
-      fs.unlinkSync(videoPath);
     }
     return event;
   } catch (error) {
@@ -247,7 +241,6 @@ const deleteDirectoryAndFiles = (files) => {
     if (!files) return;
     if (files.mainImage) fs.unlinkSync(files.mainImage[0].path), directory = files.mainImage[0].destination;
     if (files.previewImage) fs.unlinkSync(files.previewImage[0].path), directory = files.previewImage[0].destination;
-    if (files.video) fs.unlinkSync(files.video[0].path), directory = files.video[0].destination;
     if (fs.readdirSync(directory) == 0) fs.rmdirSync(directory);
   } catch (error) {
     throw new Error("Unknown error while deleting files.");
@@ -258,7 +251,6 @@ const addFilesInfo = (event, files) => {
   try {
     event.mainImage = files.mainImage[0].filename;
     event.previewImage = files.previewImage[0].filename;
-    event.video = files.video[0].filename;
     event.filesRoute = files.mainImage[0].destination;
     return event;
   } catch (error) {
@@ -268,8 +260,8 @@ const addFilesInfo = (event, files) => {
 
 const validateInputInfo = async (eventData) => {
   try {
-    const { name, description, startDate, endDate, previewImage, mainImage, category, video } = eventData;
-    if (!name && !description && !startDate && !endDate && !previewImage && !mainImage && !category && !video) {
+    const { name, description, startDate, endDate, previewImage, mainImage, category } = eventData;
+    if (!name && !description && !startDate && !endDate && !previewImage && !mainImage && !category) {
       throw new BadRequestError("No data to update.");
     }
     const event = await providerRepository.getEventByName(name);
@@ -327,7 +319,7 @@ const validateEventFields = (event, files) => {
   if (!name || !description || !startDate || !endDate || !category) {
     throw new BadRequestError("There are missing fields. Please fill all fields.");
   }
-  if (!files.mainImage || !files.previewImage || !files.video) {
+  if (!files.mainImage || !files.previewImage || !files) {
     throw new BadRequestError("There are missing files. Please upload all files.");
   }
   try {

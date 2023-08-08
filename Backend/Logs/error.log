@@ -1,0 +1,33 @@
+error: Failed to create event. There are missing files. Please upload all files. {"status":400,"timestamp":"2023-08-08T19:16:25.942Z","userType":"Provider"}
+error: Failed to create event. There are missing files. Please upload all files. {"status":400,"timestamp":"2023-08-08T19:21:19.464Z","userType":"Provider"}
+error: Failed to create event. There are missing files. Please upload all files. {"status":400,"timestamp":"2023-08-08T19:21:28.851Z","userType":"Provider"}
+error: Failed to create event. There are missing files. Please upload all files. {"status":400,"timestamp":"2023-08-08T19:22:03.814Z","userType":"Provider"}
+error: Failed to create event. There are missing files. Please upload all files. {"status":400,"timestamp":"2023-08-08T19:22:12.215Z","userType":"Provider"}
+error: Failed to create event. There are missing files. Please upload all files. {"status":400,"timestamp":"2023-08-08T19:22:24.240Z","userType":"Provider"}
+error: Failed to create event. There are missing files. Please upload all files. {"status":400,"timestamp":"2023-08-08T19:22:44.038Z","userType":"Provider"}
+error: Failed to create event. There are missing files. Please upload all files. {"status":400,"timestamp":"2023-08-08T19:22:47.539Z","userType":"Provider"}
+error: Failed to create event. There are missing files. Please upload all files. {"status":400,"timestamp":"2023-08-08T19:23:09.052Z","userType":"Provider"}
+error: Failed to create event. There are missing files. Please upload all files. {"status":400,"timestamp":"2023-08-08T19:23:14.776Z","userType":"Provider"}
+error: Failed to create event. There are missing files. Please upload all files. {"status":400,"timestamp":"2023-08-08T19:23:19.305Z","userType":"Provider"}
+error: Failed to create event. Could not create event. Date Consistency validation failed. {"status":400,"timestamp":"2023-08-08T19:24:31.120Z","userType":"Provider"}
+error: Failed to create event. There are missing files. Please upload all files. {"status":400,"timestamp":"2023-08-08T19:25:42.660Z","userType":"Provider"}
+error: Failed to create event. Cannot read properties of null (reading 'mode') {"timestamp":"2023-08-08T19:27:44.495Z","userType":"Provider"}
+error: Failed to create event. Cannot read properties of null (reading 'mode') {"timestamp":"2023-08-08T19:27:57.387Z","userType":"Provider"}
+error: Failed to create event. Cannot read properties of null (reading 'defaultPrice') {"timestamp":"2023-08-08T19:28:15.313Z","userType":"Provider"}
+error: Failed to create event. Cannot read properties of null (reading 'defaultPrice') {"timestamp":"2023-08-08T19:28:18.769Z","userType":"Provider"}
+error: Failed to logout. No token received. {"status":401,"timestamp":"2023-08-08T19:35:47.535Z","userType":"Admin"}
+error: Failed to register a Provider. Email already registered. {"status":400,"timestamp":"2023-08-08T19:35:57.475Z","userType":"Admin"}
+error: Failed to purchase event. Event not found. Please check the information provided. {"status":404,"timestamp":"2023-08-08T19:56:36.815Z","userType":"Client"}
+error: Failed to purchase event. Event not found. Please check the information provided. {"status":404,"timestamp":"2023-08-08T19:56:47.455Z","userType":"Client"}
+error: Failed to purchase event. Event not found. Please check the information provided. {"status":404,"timestamp":"2023-08-08T19:58:24.467Z","userType":"Client"}
+error: Failed to purchase event. Event not found. Please check the information provided. {"status":404,"timestamp":"2023-08-08T19:58:31.734Z","userType":"Client"}
+error: Failed to authorize event. eventLink is not defined {"timestamp":"2023-08-08T19:58:55.626Z","userType":"Admin"}
+error: Failed to authorize event. Failed to get provider: Provider is not defined {"timestamp":"2023-08-08T20:00:01.014Z","userType":"Admin"}
+error: Failed to authorize event. Failed to get provider: Provider is not defined {"timestamp":"2023-08-08T20:00:14.874Z","userType":"Admin"}
+error: Failed to authorize event. Failed to get provider: Provider is not defined {"timestamp":"2023-08-08T20:00:25.314Z","userType":"Admin"}
+error: Failed to authorize event. Event already authorized. {"status":400,"timestamp":"2023-08-08T20:00:39.023Z","userType":"Admin"}
+error: Failed to purchase event. Cannot read properties of undefined (reading 'user_id') {"timestamp":"2023-08-08T20:00:47.291Z","userType":"Client"}
+error: Failed to get authorized events. Error while retrieving the list of authorized events. {"timestamp":"2023-08-08T20:11:20.806Z","userType":"Client"}
+error: Failed to get authorized events. Error while retrieving the list of authorized events. {"timestamp":"2023-08-08T20:11:53.704Z","userType":"Client"}
+error: Failed to get authorized events. Error while retrieving the list of authorized events. {"timestamp":"2023-08-08T20:12:07.255Z","userType":"Client"}
+error: Failed to get authorized events. Error while retrieving the list of authorized events. {"timestamp":"2023-08-08T20:12:18.703Z","userType":"Client"}

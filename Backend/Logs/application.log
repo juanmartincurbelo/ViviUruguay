@@ -1,0 +1,5 @@
+{"level":"info","message":{"action":"Event creation","author":{"email":"juanmacurbe@gmail.com","id":"64d2947d08ab36f3cf28360c","name":"Juan Curbelo"}},"timestamp":"2023-08-08T19:24:50.349Z"}
+{"level":"info","message":{"action":"Event creation","author":{"email":"juanmacurbe@gmail.com","id":"64d2976baa438e54ab26f585","name":"Juan Curbelo"}},"timestamp":"2023-08-08T19:28:47.000Z"}
+{"level":"info","message":{"action":"Event creation","author":{"email":"juanmacurbe@gmail.com","id":"64d2976baa438e54ab26f585","name":"Juan Curbelo"}},"timestamp":"2023-08-08T19:36:20.382Z"}
+{"level":"info","message":{"action":"Event subscription","author":{}},"timestamp":"2023-08-08T20:07:01.701Z"}
+{"level":"info","message":{"action":"Event subscription","author":{}},"timestamp":"2023-08-08T20:08:59.583Z"}

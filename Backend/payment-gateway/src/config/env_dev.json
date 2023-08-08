@@ -1,0 +1,6 @@
+{
+    "app":{
+        "port": "3004",
+        "address": "http://localhost:3004/"
+    }
+}

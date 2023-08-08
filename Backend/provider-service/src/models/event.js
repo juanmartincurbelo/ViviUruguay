@@ -70,14 +70,6 @@ const eventSchema = new mongoose.Schema({
     type: Number,
     default: 0
   },
-  maxConcurrentClients: {
-    type: Number,
-    default: 0
-  },
-  averageWaitTime: {
-    type: Number,
-    default: 0
-  },
   sentMessages: {
     type: Number,
     default: 0

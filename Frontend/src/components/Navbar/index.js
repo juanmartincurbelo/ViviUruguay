@@ -7,7 +7,7 @@ const Navbar = ({
 
     return (
         <nav className="NavbarItems">
-            <h1 className="navbar-logo">Vivi Uruguay</h1>
+            <h1 className="navbar-logo">Vivví</h1>
             <div className="menu-icon">
 
             </div>

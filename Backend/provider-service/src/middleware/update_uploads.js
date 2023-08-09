@@ -5,10 +5,10 @@ const fs = require('fs');
 const filesStorage = multer.diskStorage({
   destination: function (req, file, cb) {
     const eventName = req.query.eventName;
-    const eventPath = path.join(__dirname, '../../..', 'uploads', eventName);
+    const eventPath = path.join(__dirname, '../../..', 'Frontend', 'public', 'eventImages', eventName);
     if (!fs.existsSync(eventPath)) {
-      fs.mkdirSync(eventPath);
-    };
+      fs.mkdirSync(eventPath, { recursive: true });
+    }
     cb(null, eventPath);
   },
   filename: function (req, file, cb) {
@@ -16,7 +16,7 @@ const filesStorage = multer.diskStorage({
     const eventName = req.query.eventName;
     try {
       const originalname = file.originalname;
-      const archiveFile = path.join(path.join(__dirname, '../../..', 'uploads'), eventName, originalname);
+      const archiveFile = path.join(path.join(__dirname, '../../..', 'Frontend', 'public', 'eventImages'), eventName, originalname);
       if (fs.existsSync(archiveFile)) {
         const error = new Error('File name already exists. Please change the file name.');
         error.statusCode = 400;

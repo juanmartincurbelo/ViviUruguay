@@ -28,7 +28,6 @@ const createEvent = async (eventData, files) => {
     const savedEvent = await providerRepository.createEvent(finalEvent, user.defaultPrice);
     const logEntry = createLogEntry("Event creation", user)
     logger.application(logEntry);
-
     return savedEvent;
   } catch (error) {
     logger.error("Failed to create event.", { message: error.message, status: error.status, userType: 'Provider' });

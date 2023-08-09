@@ -15,7 +15,6 @@ router.post("/events", authentication,
         imageUpload.fields([
             { name: 'previewImage', maxCount: 1 },
             { name: 'mainImage', maxCount: 1 },
-            { name: 'video', maxCount: 1 }
         ])(req, res, function (err) {
             if (err) {
                 if (err.message === 'File name already exists. Please change the file name.') {

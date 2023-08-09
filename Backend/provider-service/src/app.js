@@ -17,20 +17,21 @@ const initApp = async (expressApp) => {
   expressApp.use(express.json());
   expressApp.use(cookieParser());
 
-  redis.createClient(
+  const redisClient = redis.createClient(
     `redis://${configStruct.redis.host}:${configStruct.redis.port}`
   );
 
-  const parentDir = path.resolve(__dirname, "../..");
+  const parentDir = path.resolve(__dirname, "../../..");
+  const frontendPublicPath = path.join(parentDir, "Frontend", "public");
 
-  const uploadsPath = path.join(parentDir, "uploads")
+  const uploadsPath = path.join(frontendPublicPath, "eventImages");
   if (!fs.existsSync(uploadsPath)) {
-    fs.mkdirSync(uploadsPath);
-    console.log('Carpeta "uploads" creada');
+    fs.mkdirSync(uploadsPath, { recursive: true });
+    console.log('Carpeta "uploads" creada en la carpeta "public/eventImages" del frontend');
   }
 
   expressApp.use("/api/providers", providerRoutes);
-}
+};
 
 module.exports = {
   initApp,

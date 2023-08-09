@@ -5,19 +5,19 @@ const fs = require('fs');
 const imageStorage = multer.diskStorage({
   destination: function (req, file, cb) {
     const eventData = JSON.parse(req.body.jsonData);
-    const eventPath = path.join(__dirname, '../../..', 'uploads', eventData.name);
+    const eventPath = path.join(__dirname, '../../../..', 'Frontend', 'public', 'eventImages', eventData.name);
     if (!fs.existsSync(eventPath)) {
-      fs.mkdirSync(eventPath);
-    };
+      fs.mkdirSync(eventPath, { recursive: true });
+    }
     cb(null, eventPath);
   },
   filename: function (req, file, cb) {
     const err = new Error();
-    const eventData = JSON.parse(req.body.jsonData);
-    const directory = path.join(__dirname, '../../..', 'uploads', eventData.name);
     try {
       const originalname = file.originalname;
-      const archiveFile = path.join(path.join(__dirname, '../../..', 'uploads'), eventData.name, originalname);
+      const eventData = JSON.parse(req.body.jsonData);
+      const eventPath = path.join(__dirname, '../../..', 'Frontend', 'public', 'eventImages', eventData.name);
+      const archiveFile = path.join(eventPath, originalname);
       if (fs.existsSync(archiveFile)) {
         const error = new Error('File name already exists. Please change the file name.');
         error.statusCode = 400;
@@ -41,12 +41,10 @@ const fileFilterForImages = function (req, file, cb) {
   if (file.fieldname == 'previewImage' || file.fieldname == 'mainImage') {
     if (file.mimetype === 'image/png' || file.mimetype === 'image/jpeg' || file.mimetype === 'image/jpg') {
       cb(null, true);
-
     } else {
       cb(new Error('The file format is not supported.'), false);
     }
-  }
-  else {
+  } else {
     cb(new Error('The file format is not supported.'), false);
   }
 };

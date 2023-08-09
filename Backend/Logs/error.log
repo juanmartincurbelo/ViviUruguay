@@ -48,3 +48,12 @@ error: Failed to login. Failed to validate email registration: Admin is not defi
 error: Failed to login. Failed to validate email registration: Admin is not defined {"timestamp":"2023-08-08T20:32:03.876Z","userType":"Admin"}
 error: Failed to authorize event. Cannot read properties of null (reading 'name') {"timestamp":"2023-08-08T20:32:32.489Z","userType":"Admin"}
 error: Failed to authorize event. Event already authorized. {"status":400,"timestamp":"2023-08-08T20:32:39.686Z","userType":"Admin"}
+error: Failed to create event. Event name already exists. {"status":400,"timestamp":"2023-08-09T18:20:14.328Z","userType":"Provider"}
+error: Failed to create event. Could not create event. Date Consistency validation failed. {"status":400,"timestamp":"2023-08-09T18:20:41.669Z","userType":"Provider"}
+error: Failed to authorize event. Event not found. {"status":404,"timestamp":"2023-08-09T18:25:37.245Z","userType":"Admin"}
+error: Failed to authorize event. Cannot read properties of null (reading 'name') {"timestamp":"2023-08-09T18:25:45.164Z","userType":"Admin"}
+error: Failed to authorize event. Event already authorized. {"status":400,"timestamp":"2023-08-09T18:26:06.925Z","userType":"Admin"}
+error: Failed to authorize event. Cannot read properties of null (reading 'name') {"timestamp":"2023-08-09T18:26:19.288Z","userType":"Admin"}
+error: Failed to authorize event. Event not found. {"status":404,"timestamp":"2023-08-09T18:35:47.433Z","userType":"Admin"}
+error: Failed to authorize event. Cannot read properties of null (reading 'name') {"timestamp":"2023-08-09T18:36:04.947Z","userType":"Admin"}
+error: Failed to authorize event. Event already authorized. {"status":400,"timestamp":"2023-08-09T18:36:43.581Z","userType":"Admin"}

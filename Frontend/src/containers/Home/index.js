@@ -37,14 +37,14 @@ const Home = () => {
     />
   ));
 
-  const locationActivitiesList = events.map(event => (
-    <CardActivity
-      key={event._id}
-      imageActivity={event.previewImage}
-      title={event.name}
-      description={event.description}
-    />
-  ));
+  // const locationActivitiesList = events.map(event => (
+  //   <CardActivity
+  //     key={event._id}
+  //     imageActivity={`../../../../../Backend/uploads/${event.previewImage}`}
+  //     title={event.name}
+  //     description={event.description}
+  //   />
+  // ));
 
   return (
     <>
@@ -68,14 +68,14 @@ const Home = () => {
         </div>
       </div >
 
-      <div className="card-home-activities">
+      {/* <div className="card-home-activities">
         <div className='title'>
           <h1>Principales Destinos</h1>
         </div>
         <div className="card-home-container">
           {locationActivitiesList}
         </div>
-      </div>
+      </div> */}
 
       {/* <div className="card-home-activities">
         <div className='title'>

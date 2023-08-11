@@ -16,3 +16,5 @@ info: Authorized access to the system by user with email 'juanmacurbe@gmail.com'
 info: Authorized access to the system by user with email 'admin@example.com'. {"timestamp":"2023-08-09T18:35:41.624Z","userType":"Admin"}
 info: Authorized access to the system by user with email 'juanmacurbe@gmail.com'. {"timestamp":"2023-08-09T18:36:13.404Z","userType":"Provider"}
 info: Authorized access to the system by user with email 'admin@example.com'. {"timestamp":"2023-08-09T18:36:42.016Z","userType":"Admin"}
+info: Authorized access to the system by user with email 'admin@example.com'. {"timestamp":"2023-08-09T18:40:06.615Z","userType":"Admin"}
+info: Authorized access to the system by user with email 'juanmacurbe@gmail.com'. {"timestamp":"2023-08-09T18:40:18.634Z","userType":"Provider"}

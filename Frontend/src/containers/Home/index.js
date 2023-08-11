@@ -31,7 +31,7 @@ const Home = () => {
   const featuredActivitiesList = events.map(event => (
     <CardActivity
       key={event._id}
-      imageActivity={`/eventImages/${event.previewImage}`}
+      imageActivity={`/eventImages/${event.name}/${event.previewImage}`}
       title={event.name}
       description={event.description}
     />
@@ -40,7 +40,7 @@ const Home = () => {
   const locationActivitiesList = events.map(event => (
     <CardActivity
       key={event._id}
-      imageActivity={`/eventImages/${event.previewImage}`}
+      imageActivity={`/eventImages/${event.name}/${event.previewImage}`}
       title={event.name}
       description={event.description}
     />

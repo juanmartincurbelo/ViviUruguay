@@ -4,14 +4,15 @@ import axios from 'axios';
 import './style.scss';
 import Navbar from 'src/components/Navbar';
 import CardHome from 'src/components/CardHome';
+import CardHomeTitle from 'src/components/CardHomeTitle';
 import screenImage from './../../img/screen.jpg';
 
 import CardActivity from 'src/components/CardActivity';
 
 const Home = () => {
 
-  let title = "Tu sitio de actividades para todas las edades";
-  let description = "Reserva actividades desde la comodidad de tu casa, sin preocuparte por nada "
+  // let title = "VIBIEN";
+  let description = "Reservá tu próxima salida de forma fácil y rápida.";
 
   const [events, setEvents] = useState([]);
 
@@ -50,13 +51,12 @@ const Home = () => {
     <>
       <Navbar />
       <div className='card-home-top'>
-        <CardHome
-          title={title}
-          description={description}
+        <CardHomeTitle
+        // title={title}
         />
-        <div className="imgBxHome">
-          <img src={screenImage} alt="Screen" className="image" />
-        </div>
+        <CardHome
+          title={description}
+        />
       </div>
 
       <div className="card-home-activities">

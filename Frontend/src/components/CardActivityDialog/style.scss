@@ -1,0 +1,22 @@
+.custom-dialog-title h2 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 35px;
+}
+
+.custom-dialog-title {
+    padding-top: 0px;
+    /* Ajusta el valor según sea necesario */
+    padding-bottom: 0px;
+    /* Ajusta el valor según sea necesario */
+}
+
+/* style.scss */
+.dialog-image {
+    width: 450px;
+    /* Ancho fijo */
+    height: calc(500px * 9 / 16);
+    /* Altura calculada para mantener la relación 16:9 */
+    display: inline;
+    margin: 0 auto;
+}

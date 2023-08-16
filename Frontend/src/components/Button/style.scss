@@ -3,32 +3,35 @@
 @import "../../constants/sizes";
 
 .button {
-  background-color: $primary-color;
-  color: $third-color;
-  border-radius: 29px;
-  width: 8rem;
-  padding: 0.7rem;
-  margin-top: 5px;
-  font-family: $font;
+  background: #8b52ff;
+  border-radius: 999px;
+  box-shadow: #8b52ff 0 10px 20px -10px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-size: 25px;
   font-weight: 700;
+  line-height: 24px;
+  opacity: 1;
+  outline: 0 solid transparent;
+  padding: 16px 25px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: fit-content;
+  word-break: break-word;
+  border: 0;
 
-  &:hover {
-    background-color: $darken-primary-color;
-  }
 
-  &:disabled {
-    &:hover {
-      background-color: $primary-color;
+  animation: fade-in 1s ease forwards;
+
+  @keyframes fade-in {
+    from {
+      opacity: 0; // Empieza con opacidad 0
     }
-  }
 
-  @media (max-width: $tablet) {
-    width: 7rem;
-    padding: 0.55rem;
-  }
-
-  @media (max-width: $phone) {
-    width: 6rem;
-    padding: 0.4rem;
+    to {
+      opacity: 1; // Termina con opacidad 1
+    }
   }
 }

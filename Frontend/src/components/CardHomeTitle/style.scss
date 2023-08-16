@@ -2,7 +2,7 @@
 @import '../../constants/colors';
 @import "../../constants/sizes";
 
-.containerHome {
+.containerHomeTitle {
     font-family: $font-sidebar;
     display: flex;
     justify-content: center;
@@ -21,17 +21,23 @@
     }
 }
 
-.cardHome {
-    margin-top: 70px;
+.cardHomeTitle {
+    margin-top: 0px;
     position: relative;
     border-radius: 20px;
     max-width: 600px;
 }
 
-.cardHome .contentHome h2 {
-    font-size: 3em;
-    font-weight: 900;
+.cardHomeTitle .contentHomeTitle h2 {
+    font-family: $font-sidebar2;
+    font-size: 12em;
+    letter-spacing: 15px;
+    font-weight: 650;
     color: #ffffff;
     line-height: 1.1em;
-    margin-bottom: 20px;
+    margin-bottom: 70px;
+}
+
+.cardHomeTitle .contentHomeTitle h2 span {
+    color: #8b52ff;
 }

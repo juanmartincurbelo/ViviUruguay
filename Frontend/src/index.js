@@ -1,5 +1,5 @@
 import "./style.scss";
-import fondoImage from './img/fondo.jpg';
+import fondoImage from './img/fondo.png';
 
 import React from 'react';
 import ReactDOM from 'react-dom';

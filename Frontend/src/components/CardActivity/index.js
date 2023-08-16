@@ -4,11 +4,12 @@ import './style.scss'
 const CardActivity = ({
     title,
     description,
-    imageActivity
+    imageActivity,
+    onClick
 }) => {
 
     return (
-        <div className="cardActivity">
+        <div className="cardActivity" onClick={onClick}>
             <div className="imgBx">
                 <img src={imageActivity}></img>
             </div>

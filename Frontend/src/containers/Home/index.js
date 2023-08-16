@@ -3,15 +3,31 @@ import axios from 'axios';
 
 import './style.scss';
 import Navbar from 'src/components/Navbar';
+import Button from 'src/components/Button';
 import CardHome from 'src/components/CardHome';
+import CardHomeTitle from 'src/components/CardHomeTitle';
 import screenImage from './../../img/screen.jpg';
 
 import CardActivity from 'src/components/CardActivity';
+import CardActivityDialog from 'src/components/CardActivityDialog';
 
 const Home = () => {
 
-  let title = "Tu sitio de actividades para todas las edades";
-  let description = "Reserva actividades desde la comodidad de tu casa, sin preocuparte por nada "
+  let description = "Reservá tu próxima actividad de forma rápida y sencilla.";
+
+  const [dialogOpen, setDialogOpen] = useState(false);
+
+  const handleDialogOpen = (event) => {
+    setSelectedEvent(event); // Establecer el evento seleccionado
+    setDialogOpen(true); // Abrir el diálogo
+  };
+
+  const handleDialogClose = () => {
+    setSelectedEvent(null);
+    setDialogOpen(false);
+  };
+
+  const [selectedEvent, setSelectedEvent] = useState(null);
 
   const [events, setEvents] = useState([]);
 
@@ -34,6 +50,7 @@ const Home = () => {
       imageActivity={`/eventImages/${event.name}/${event.previewImage}`}
       title={event.name}
       description={event.description}
+      onClick={() => handleDialogOpen(event)} // Pasar el evento al hacer clic
     />
   ));
 
@@ -43,20 +60,26 @@ const Home = () => {
       imageActivity={`/eventImages/${event.name}/${event.previewImage}`}
       title={event.name}
       description={event.description}
+      onClick={() => handleDialogOpen(event)} // Pasar el evento al hacer clic
     />
   ));
 
   return (
     <>
       <Navbar />
+
       <div className='card-home-top'>
-        <CardHome
-          title={title}
-          description={description}
+        <CardHomeTitle
+        // title={title}
         />
-        <div className="imgBxHome">
-          <img src={screenImage} alt="Screen" className="image" />
-        </div>
+        <CardHome
+          title={description}
+        />
+      </div>
+
+      <div className="card-home-show-activities">
+        <Button
+          text="Ver actividades" />
       </div>
 
       <div className="card-home-activities">
@@ -83,6 +106,7 @@ const Home = () => {
         </div>
       </div>
 
+      <CardActivityDialog selectedEvent={selectedEvent} onClose={handleDialogClose} />
     </>
   )
 };

@@ -36,6 +36,7 @@ const Home = () => {
       try {
         const response = await axios.get('http://localhost:3003/api/clients/auth-events');
         setEvents(response.data);
+        console.log(response.data);
       } catch (error) {
         console.error('Error fetching events:', error);
       }

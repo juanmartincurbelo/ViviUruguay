@@ -58,3 +58,10 @@ html {
     max-width: 1350px;
     flex-wrap: wrap;
 }
+
+.card-info {
+    display: flex;
+    max-width: 1100px;
+    margin: auto;
+    justify-content: space-around;
+}

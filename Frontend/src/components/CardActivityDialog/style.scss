@@ -20,3 +20,15 @@
     display: inline;
     margin: 0 auto;
 }
+
+/* Cambia el fondo del diálogo a gris oscuro */
+.MuiDialog-paper {
+    background-color: white !important;
+    /* Usamos !important para asegurarnos de que los estilos se apliquen */
+}
+
+/* Cambia el color del texto para que sea legible en el fondo oscuro */
+.MuiDialogContentText-root {
+    color: black !important;
+    /* Cambia el color del texto aquí */
+}

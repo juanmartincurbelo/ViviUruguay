@@ -46,12 +46,13 @@ export default function CardActivityDialog({ selectedEvent, onClose }) {
                         <h2>{selectedEvent.name} <span>{selectedEvent.price}</span></h2>
                     </DialogTitle>
                     <DialogContent dividers={scroll === 'paper'}>
-                        <img src={`/eventImages/${selectedEvent.name}/${selectedEvent.previewImage}`} className="dialog-image"></img>
                         <img src={`/eventImages/${selectedEvent.name}/${selectedEvent.mainImage}`} className="dialog-image"></img>
+                        <img src={`/eventImages/${selectedEvent.name}/${selectedEvent.previewImage}`} className="dialog-image"></img>
                         <DialogContentText id="scroll-dialog-description" ref={descriptionElementRef} tabIndex={-1}>
-                            <h2>Descripción</h2>
-                            <p>{selectedEvent.description}</p>
-                            {/* Otros atributos del evento */}
+                            <div className='card-info'>
+                                <h2>Descripción</h2>
+                                <p>{selectedEvent.description}</p>
+                            </div>
                         </DialogContentText>
                     </DialogContent>
                     <DialogActions>

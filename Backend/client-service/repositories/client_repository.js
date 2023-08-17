@@ -28,8 +28,7 @@ const createClient = async (newClient) => {
 
 const getAuthorizedEvents = async () => {
   try {
-    const events = await Event.find({ authorization: "Accepted", endDate: { $gte: new Date() } })
-      .select('name description price startDate endDate category previewImage -_id');
+    const events = await Event.find({ authorization: "Accepted", endDate: { $gte: new Date() } });
 
     return events;
   } catch (error) {

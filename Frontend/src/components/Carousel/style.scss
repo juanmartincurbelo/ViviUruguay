@@ -1,0 +1,16 @@
+.box {
+    max-width: 700px;
+    margin: auto;
+}
+
+.carousel {
+    & .carousel-status {
+        font-size: 0px
+    }
+}
+
+/* Agrega este estilo para centrar las miniaturas */
+.carousel .thumbs-wrapper {
+    display: flex;
+    justify-content: center;
+}

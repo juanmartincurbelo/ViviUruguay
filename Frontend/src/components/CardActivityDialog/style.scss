@@ -1,34 +1,86 @@
-.custom-dialog-title h2 {
-    margin-top: 0px;
-    margin-bottom: 0px;
-    font-size: 35px;
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+.dialog-title {
+    color: black;
+    font-family: 'Open Sans', sans-serif;
 }
 
-.custom-dialog-title {
-    padding-top: 0px;
-    /* Ajusta el valor según sea necesario */
-    padding-bottom: 0px;
-    /* Ajusta el valor según sea necesario */
+.dialog-title h1 {
+    margin-top: 20px;
 }
 
-/* style.scss */
+.card-description h2 {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.card-description p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    color: black;
+    text-align: justify;
+}
+
 .dialog-image {
-    width: 450px;
-    /* Ancho fijo */
-    height: calc(500px * 9 / 16);
-    /* Altura calculada para mantener la relación 16:9 */
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    width: 440px;
+    height: calc(450px * 9 / 16);
+    margin-right: 5px;
     display: inline;
-    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
 }
 
-/* Cambia el fondo del diálogo a gris oscuro */
+.MuiDialogTitle-root {
+    color: black !important;
+}
+
 .MuiDialog-paper {
     background-color: white !important;
-    /* Usamos !important para asegurarnos de que los estilos se apliquen */
 }
 
-/* Cambia el color del texto para que sea legible en el fondo oscuro */
 .MuiDialogContentText-root {
     color: black !important;
-    /* Cambia el color del texto aquí */
+}
+
+.card-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.card-description {
+    width: 50%;
+}
+
+.right-container {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    /* Agrega esta propiedad */
+    top: 30px;
+    /* Ajusta la distancia desde la parte superior según tu necesidad */
+}
+
+.selector-container {
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Centrar horizontalmente */
+    gap: 10px;
+    /* Espacio entre elementos */
+}
+
+.map-container {
+    width: 450px;
+    height: calc(450px * 9 / 16);
+}
+
+.button-container {
+    margin-top: 40px;
 }

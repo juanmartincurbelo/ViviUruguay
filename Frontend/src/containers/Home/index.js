@@ -3,9 +3,10 @@ import axios from 'axios';
 
 import './style.scss';
 import Navbar from 'src/components/Navbar';
-import Button from 'src/components/Button';
+import Button from 'src/components/ButtonTitle';
 import CardHome from 'src/components/CardHome';
 import CardHomeTitle from 'src/components/CardHomeTitle';
+import DatePicker from 'src/components/DatePicker';
 import screenImage from './../../img/screen.jpg';
 
 import CardActivity from 'src/components/CardActivity';
@@ -71,7 +72,6 @@ const Home = () => {
 
       <div className='card-home-top'>
         <CardHomeTitle
-        // title={title}
         />
         <CardHome
           title={description}

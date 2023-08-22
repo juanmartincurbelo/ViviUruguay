@@ -15,6 +15,10 @@ module.exports = {
                 use: ['style-loader', 'css-loader', 'sass-loader'],
             },
             {
+                test: /\.css$/, // Agrega esta regla para archivos CSS
+                use: ['style-loader', 'css-loader'],
+            },
+            {
                 exclude: /node_modules/,
                 test: /\.js$/,
                 use: ['babel-loader'],
@@ -25,7 +29,7 @@ module.exports = {
                     loader: 'file-loader',
                     options: {
                         name: '[name].[ext]',
-                        outputPath: 'img/', // Cambia el directorio de salida si lo deseas
+                        outputPath: 'img/',
                     },
                 },
             },

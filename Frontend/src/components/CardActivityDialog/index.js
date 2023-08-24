@@ -1,28 +1,25 @@
 import * as React from 'react';
 import ButtonForm from '../ButtonForm';
 import Dialog from '@mui/material/Dialog';
-import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
-import DialogContentText from '@mui/material/DialogContentText';
-import DialogTitle from '@mui/material/DialogTitle';
-
-import DatePickerCalendar from 'src/components/DatePicker';
-import './style.scss'
-
-import mapa from './../../img/mapa.png';
-import HourSelector from '../HourSelector';
-import InputNumber from '../InputNumber';
-
 import Box from '@mui/material/Box';
 import Stepper from '@mui/material/Stepper';
 import Step from '@mui/material/Step';
 import StepButton from '@mui/material/StepButton';
-import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
+import TextField from '@mui/material/TextField';
+
+import DatePickerCalendar from 'src/components/DatePicker';
+import mapa from './../../img/mapa.png';
+import HourSelector from '../HourSelector';
+import InputNumber from '../InputNumber';
+
+import './style.scss'
+
 
 const steps = ['Elige tu actividad', 'Completa tus datos', 'Realiza el pago'];
 
 import CarouselPhotos from '../Carousel';
+import CardReservation from '../CardReservation';
 
 export default function CardActivityDialog({ selectedEvent, onClose }) {
     const [scroll, setScroll] = React.useState('paper');
@@ -37,6 +34,7 @@ export default function CardActivityDialog({ selectedEvent, onClose }) {
 
     const handleClose = () => {
         onClose();
+        resetSteps();
     };
 
     /* STEPPER */
@@ -63,6 +61,10 @@ export default function CardActivityDialog({ selectedEvent, onClose }) {
     const handleNext = () => {
         const requiredFieldsCompleted = checkRequiredFields();
 
+        if (activeStep == 3) {
+            return;
+        }
+
         if (requiredFieldsCompleted) {
             const newActiveStep = activeStep + 1;
             setActiveStep(newActiveStep);
@@ -73,27 +75,13 @@ export default function CardActivityDialog({ selectedEvent, onClose }) {
         setActiveStep((prevActiveStep) => prevActiveStep - 1);
     };
 
-    const handleStep = (step) => () => {
-        setActiveStep(step);
-    };
-
-    const handleComplete = () => {
-        const newCompleted = completed;
-        newCompleted[activeStep] = true;
-        setCompleted(newCompleted);
-        handleNext();
-    };
-
-    const handleReset = () => {
-        setActiveStep(0);
-        setCompleted({});
-    };
-
     const checkRequiredFields = () => {
-        // Implement your own logic to check if required fields are completed
-        // For example, you can iterate through requiredFields and check their values
-        // Return true if all required fields are completed, otherwise return false
+        return true;
     };
+
+    const resetSteps = () => {
+        setActiveStep(0);
+    }
 
     return (
         <div>
@@ -101,19 +89,18 @@ export default function CardActivityDialog({ selectedEvent, onClose }) {
                 <Dialog
                     open={true}
                     onClose={handleClose}
-                    onExited={() => setSelectedEvent(null)}
                     scroll={scroll}
                     aria-labelledby="scroll-dialog-title"
                     aria-describedby="scroll-dialog-description"
                     PaperProps={{
                         style: {
-                            minWidth: '400px', // Ajusta el ancho según tus necesidades, en este caso 80% del ancho de la ventana
+                            minWidth: '50%',
                             maxWidth: '50%',
-                            maxHeight: '90vh', // Ajusta la altura máxima según tu necesidad
-                            display: 'flex', // Use flexbox layout
-                            flexDirection: 'column', // Asegúrate de usar una disposición de columna
-                            marginTop: '30px', // Espacio en la parte superior
-                            marginBottom: '0px', // Espacio en la parte inferior
+                            height: '90vh',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            marginTop: '30px',
+                            marginBottom: '0px',
                         },
                     }}
                 >
@@ -130,37 +117,80 @@ export default function CardActivityDialog({ selectedEvent, onClose }) {
                         </Stepper>
                         {/*  */}
 
-                        <div className='dialog-title'>
-                            <h1>{selectedEvent.name} <span>{selectedEvent.price}</span></h1>
-                        </div>
-                        <CarouselPhotos />
-                        <div className='card-content'>
-                            <div className='card-description'>
-                                <h2>Descripción</h2>
-                                <p>{selectedEvent.description}</p>
-                                <h2>¿Dónde es la actividad?</h2>
-                                <img className='map-container' src={mapa} />
-                            </div>
-                            <div className='right-container'>
-                                <div className="date-picker-container">
-                                    <DatePickerCalendar></DatePickerCalendar>
+                        {activeStep === 0 && (
+                            <div>
+                                <div className='dialog-title'>
+                                    <h1>{selectedEvent.name} <span>{selectedEvent.price}</span></h1>
                                 </div>
+                                <CarouselPhotos />
+                                <div className='card-content'>
+                                    <div className='card-description'>
+                                        <h2>Descripción</h2>
+                                        <p>{selectedEvent.description}</p>
+                                        <h2>¿Dónde es la actividad?</h2>
+                                        <img className='map-container' src={mapa} />
+                                    </div>
+                                    <div className='right-container'>
+                                        <div className="date-picker-container">
+                                            <DatePickerCalendar></DatePickerCalendar>
+                                        </div>
 
-                                <div className="selector-container">
-                                    <HourSelector />
-                                    <InputNumber />
-                                </div>
-
-                                <div className="button-container">
-                                    {/* <DialogActions>
-                                        <ButtonForm onClick={handleClose} text={"Cancelar"} color="#9b9b9b" />
-                                        <ButtonForm onClick={handleClose} text={"Reservar"} color="#28b761" />
-                                    </DialogActions> */}
+                                        <div className="selector-container">
+                                            <HourSelector />
+                                            <InputNumber />
+                                        </div>
+                                        <h2>Total: <span>$2780</span></h2>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        )}
 
-                        <div>
+                        {activeStep === 1 && (
+                            <div>
+                                <CardReservation
+                                    title='Detalles de la reserva:'
+                                    name={selectedEvent.name}
+                                    date='19 de enero de 2024'
+                                    hour='15:00 hs.'
+                                    quantity='2 Adultos'
+                                    price='Total: $2780'
+
+                                    imageActivity='/eventImages/Tour Bodega Garzón/Tour Bodega Garzon 2.jpg' />
+
+                                <div className='dialog-title-complete'>
+                                    <h2>Completa sus datos</h2>
+                                </div>
+                                <div className='card-content-personalInfo'>
+                                    <div className="text-field-group">
+                                        <TextField
+                                            required
+                                            id="outlined-required-1"
+                                            label="Cédula de identidad"
+                                        />
+                                        <TextField
+                                            required
+                                            id="outlined-required-2"
+                                            label="Nombre y apellido"
+                                        />
+                                    </div>
+                                    <div className="text-field-group">
+                                        <TextField
+                                            required
+                                            id="outlined-required-3"
+                                            label="Celular"
+                                        />
+                                        <TextField
+                                            required
+                                            id="outlined-required-4"
+                                            label="Mail"
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+                        )}
+
+
+                        <div className="action-buttons">
                             <Box sx={{ display: 'flex', flexDirection: 'row', pt: 2 }}>
                                 <ButtonForm
                                     color="#9b9b9b"

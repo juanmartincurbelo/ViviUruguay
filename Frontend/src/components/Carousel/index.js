@@ -1,33 +1,25 @@
 import React from 'react';
-import { Carousel } from 'react-responsive-carousel';
-import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import Carousel from "@itseasy21/react-elastic-carousel";
+
 import './style.scss';
 
-const images = [
-    '/eventImages/Visita Teatro Solis/Visita Teatro Solis 2.jpg',
-    '/eventImages/Visita Teatro Solis/Visita Teatro Solis.jpg',
-    '/eventImages/Visita Teatro Solis/Visita Teatro Solis 2.jpg',
-    '/eventImages/Visita Teatro Solis/Visita Teatro Solis.jpg',
+const breakPoints = [
+    { width: 1, itemsToShow: 1 },
+    { width: 600, itemsToShow: 2 },
+    { width: 1000, itemsToShow: 3 },
+    { width: 1400, itemsToShow: 4 },
 ];
 
-function CarouselPhotos() {
+const CarouselPhotos = ({
+    events,
+}) => {
+
     return (
-        <div className="box">
-            <Carousel
-                useKeyboardArrows={true}
-                thumbWidth={80} // Ajusta el tamaño de las miniaturas
-            >
-                {images.map((URL, index) => (
-                    <div className="slide" key={index}>
-                        <img
-                            alt="sample_file"
-                            src={URL}
-                            style={{ marginTop: '0px' }} // Ajusta el margen superior
-                        />
-                    </div>
-                ))}
-            </Carousel>
-        </div>
+        <div className='carousel-container'>
+            <Carousel breakPoints={breakPoints} pagination={false}>
+                {events}
+            </Carousel >
+        </div >
     );
 }
 

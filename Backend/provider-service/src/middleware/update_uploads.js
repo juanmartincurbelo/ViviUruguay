@@ -37,7 +37,7 @@ const filesLimits = {
 };
 
 const fileFilterForUpdate = function (req, file, cb) {
-  if (file.fieldname == 'previewImage' || file.fieldname == 'mainImage') {
+  if (file.fieldname == 'previewImage' || file.fieldname == 'image1' || file.fieldname == 'image2' || file.fieldname == 'image3') {
     if (file.mimetype === 'image/png' || file.mimetype === 'image/jpeg' || file.mimetype === 'image/jpg') {
       cb(null, true);
     } else {

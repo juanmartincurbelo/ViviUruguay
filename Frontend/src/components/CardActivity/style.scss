@@ -3,13 +3,14 @@
 @import "../../constants/sizes";
 
 .cardActivity {
-    margin-top: 40px;
+    margin-top: 60px !important;
+    margin-bottom: 60px !important;
     position: relative;
     width: 300px;
     height: 450px;
     background: #fff;
     border-radius: 20px;
-    box-shadow: 0 20px 70px rgba(0, 0, 0, 0.3);
+    // box-shadow: 0 20px 70px rgba(0, 0, 0, 0.3);
     transition: 0.5s;
     overflow: hidden;
     margin-bottom: 0px;

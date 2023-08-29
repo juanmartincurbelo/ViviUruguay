@@ -4,80 +4,80 @@ const eventSchema = new mongoose.Schema({
   name: {
     type: String,
     required: true,
-    unique: true,
+  },
+  previewDescription: {
+    type: String,
   },
   description: {
     type: String,
-    required: true
-  },
-  startDate: {
-    type: Date,
     required: true,
-  },
-  endDate: {
-    type: Date,
-    required: true,
-    validate: {
-      validator: function (value) {
-        return value > this.startDate;
-      },
-      message: 'End date must be greater than the start date.'
-    }
-  },
-  previewImage: {
-    type: String,
-    required: true
-  },
-  mainImage: {
-    type: String,
-    required: true
   },
   category: {
     type: String,
-    required: true
+    required: true,
+  },
+  price: {
+    type: Number,
+    required: true,
+  },
+  currencySymbol: {
+    type: String,
+    required: true,
+  },
+  location: {
+    type: String,
+    required: true,
+  },
+  extras: [
+    {
+      name: String,
+      price: String,
+    },
+  ],
+  additionalInfo: {
+    type: String,
+  },
+  soldTickets: {
+    type: Number,
+    required: true,
+  },
+  priority: {
+    type: String,
+    required: true,
   },
   authorization: {
     type: String,
     enum: ['Accepted', 'Pending', 'Declined'],
     required: true
   },
-  provider_id: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: 'provider',
+  image1: {
+    type: String,
     required: true
   },
-  receivers: {
-    type: [String]
-  },
-  subscribedClients: {
-    type: Number,
-    default: 0
-  },
-  priority: {
+  image2: {
     type: String,
-    type: Number,
-    default: 0
+    required: true
   },
-  discount: {
-    type: Number,
-    default: 0
+  image3: {
+    type: String,
+    required: true
   },
-  maxTickets: {
-    type: Number,
-    default: 0
+  previewImage: {
+    type: String,
+    required: true
   },
-  averagePurchaseTime: {
-    type: Number,
-    default: 0
-  },
-  sentMessages: {
-    type: Number,
-    default: 0
-  },
-  failedMessages: {
-    type: Number,
-    default: 0
-  },
+  plays: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'Plays',
+    },
+  ],
+  reviews: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'Reviews',
+    },
+  ],
 });
 
 const Event = mongoose.model('Event', eventSchema);

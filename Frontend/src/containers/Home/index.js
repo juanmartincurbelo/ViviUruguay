@@ -11,6 +11,7 @@ import screenImage from './../../img/screen.jpg';
 
 import CardActivity from 'src/components/CardActivity';
 import CardActivityDialog from 'src/components/CardActivityDialog';
+import CarouselPhotos from 'src/components/Carousel';
 
 const Home = () => {
 
@@ -86,18 +87,18 @@ const Home = () => {
         <div className='title'>
           <h1>Actividades destacadas</h1>
         </div>
-        <div className="card-home-container">
-          {featuredActivitiesList}
-        </div>
+        <CarouselPhotos
+          events={featuredActivitiesList}
+        />
       </div >
 
       <div className="card-home-activities">
         <div className='title'>
           <h1>Principales Destinos</h1>
         </div>
-        <div className="card-home-container">
-          {locationActivitiesList}
-        </div>
+        <CarouselPhotos
+          events={locationActivitiesList}
+        />
       </div>
 
       <div className="card-home-activities">

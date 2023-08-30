@@ -46,25 +46,29 @@ const Home = () => {
     fetchEvents();
   }, []);
 
-  const featuredActivitiesList = events.map(event => (
-    <CardActivity
-      key={event._id}
-      imageActivity={`/eventImages/${event.name}/${event.previewImage}`}
-      title={event.name}
-      description={event.description}
-      onClick={() => handleDialogOpen(event)} // Pasar el evento al hacer clic
-    />
-  ));
+  const featuredActivitiesList = events.length > 0
+    ? events.map(event => (
+      <CardActivity
+        key={event._id}
+        imageActivity={`/eventImages/${event.name}/${event.previewImage}`}
+        title={event.name}
+        description={event.description}
+        onClick={() => handleDialogOpen(event)}
+      />
+    ))
+    : <p>No hay eventos destacados disponibles.</p>;
 
-  const locationActivitiesList = events.map(event => (
-    <CardActivity
-      key={event._id}
-      imageActivity={`/eventImages/${event.name}/${event.previewImage}`}
-      title={event.name}
-      description={event.description}
-      onClick={() => handleDialogOpen(event)} // Pasar el evento al hacer clic
-    />
-  ));
+  const locationActivitiesList = events.length > 0
+    ? events.map(event => (
+      <CardActivity
+        key={event._id}
+        imageActivity={`/eventImages/${event.name}/${event.previewImage}`}
+        title={event.name}
+        description={event.description}
+        onClick={() => handleDialogOpen(event)}
+      />
+    ))
+    : <p>No hay eventos disponibles en esta ubicación.</p>;
 
   return (
     <>

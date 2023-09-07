@@ -18,6 +18,13 @@ const CarouselPhotos = ({
         <div className='carousel-container'>
             <Carousel breakPoints={breakPoints} pagination={false}>
                 {events}
+                {events}
+                {events}
+                {events}
+                {events}
+                {events}
+                {events}
+                {events}
             </Carousel >
         </div >
     );

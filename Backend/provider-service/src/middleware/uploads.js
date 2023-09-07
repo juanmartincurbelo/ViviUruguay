@@ -34,11 +34,11 @@ const imageStorage = multer.diskStorage({
 
 const imageLimits = {
   fileSize: 5 * 1024 * 1024,
-  files: 3
+  files: 4
 };
 
 const fileFilterForImages = function (req, file, cb) {
-  if (file.fieldname == 'previewImage' || file.fieldname == 'mainImage') {
+  if (file.fieldname == 'previewImage' || file.fieldname == 'image1' || file.fieldname == 'image2' || file.fieldname == 'image3') {
     if (file.mimetype === 'image/png' || file.mimetype === 'image/jpeg' || file.mimetype === 'image/jpg') {
       cb(null, true);
     } else {

@@ -25,6 +25,7 @@ const createEvent = async (eventData, files) => {
     event.receivers = [];
     const finalEvent = await addFilesInfo(event, files);
     const user = await providerRepository.getProvider(eventData.provider_id);
+    console.log("hola");
     const savedEvent = await providerRepository.createEvent(finalEvent, user.defaultPrice);
     const logEntry = createLogEntry("Event creation", user)
     logger.application(logEntry);
@@ -238,8 +239,10 @@ const deleteDirectoryAndFiles = (files) => {
   try {
     var directory;
     if (!files) return;
-    if (files.mainImage) fs.unlinkSync(files.mainImage[0].path), directory = files.mainImage[0].destination;
     if (files.previewImage) fs.unlinkSync(files.previewImage[0].path), directory = files.previewImage[0].destination;
+    if (files.image1) fs.unlinkSync(files.image1[0].path), directory = files.image1[0].destination;
+    if (files.image2) fs.unlinkSync(files.image2[0].path), directory = files.image2[0].destination;
+    if (files.image3) fs.unlinkSync(files.image3[0].path), directory = files.image3[0].destination;
     if (fs.readdirSync(directory) == 0) fs.rmdirSync(directory);
   } catch (error) {
     throw new Error("Unknown error while deleting files.");
@@ -248,9 +251,11 @@ const deleteDirectoryAndFiles = (files) => {
 
 const addFilesInfo = (event, files) => {
   try {
-    event.mainImage = files.mainImage[0].filename;
     event.previewImage = files.previewImage[0].filename;
-    event.filesRoute = files.mainImage[0].destination;
+    event.image1 = files.image1[0].filename;
+    event.image2 = files.image1[0].filename;
+    event.image3 = files.image1[0].filename;
+    event.filesRoute = files.previewImage[0].destination;
     return event;
   } catch (error) {
     throw new Error("Unknown error while adding files.");
@@ -314,21 +319,12 @@ const validateEventName = async (name) => {
 };
 
 const validateEventFields = (event, files) => {
-  const { name, description, startDate, endDate, category } = event;
-  if (!name || !description || !startDate || !endDate || !category) {
+  const { name, previewDescription, description, soldTickets, priority } = event;
+  if (!name || !previewDescription || !description || !soldTickets || !priority) {
     throw new BadRequestError("There are missing fields. Please fill all fields.");
   }
-  if (!files.mainImage || !files.previewImage || !files) {
+  if (!files.previewImage || !files.image1 || !files.image2 || !files.image3 || !files) {
     throw new BadRequestError("There are missing files. Please upload all files.");
-  }
-  try {
-    var startDateTime = new Date(startDate).toISOString();
-    var endDateTime = new Date(endDate).toISOString();
-  } catch (error) {
-    throw new BadRequestError("Invalid start or end date. Please provide valid dates.");
-  }
-  if (isNaN(new Date(startDateTime)) || isNaN(new Date(endDateTime))) {
-    throw new BadRequestError("Invalid start or end date. Please provide valid dates.");
   }
 };
 

@@ -10,6 +10,7 @@ const createEvent = async (eventData, defaultPrice) => {
     const savedEvent = await newEvent.save();
     return savedEvent;
   } catch (error) {
+    console.log(error.message);
     throw new Error('Unknown error at creating event.');
   }
 };

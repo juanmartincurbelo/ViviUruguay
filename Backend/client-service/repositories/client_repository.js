@@ -28,7 +28,7 @@ const createClient = async (newClient) => {
 
 const getAuthorizedEvents = async () => {
   try {
-    const events = await Event.find({ authorization: "Accepted", endDate: { $gte: new Date() } });
+    const events = await Event.find({ authorization: "Accepted" });
 
     return events;
   } catch (error) {

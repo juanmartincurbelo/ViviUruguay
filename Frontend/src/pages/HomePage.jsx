@@ -1,11 +1,12 @@
 import React from "react";
 import MainLayout from "../components/MainLayout";
+import MainActividades from "../components/MainActividades";
 
 const HomePage = () => {
   return (
-      <MainLayout>
-        <h1>Home Page</h1>
-      </MainLayout>
+    <MainLayout>
+      <MainActividades />
+    </MainLayout>
   );
 };
 

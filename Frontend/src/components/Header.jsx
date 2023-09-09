@@ -85,19 +85,12 @@ const Header = () => {
 
   return (
     <section className="sticky top-0 left-0 right-0 z-50 bg-secondary">
-      <header className="container mx-auto px-5 flex justify-between py-4 items-center">
+      <header className="container mx-auto flex justify-between py-4 px-10 items-center">
         <Link to={"/"}>
-          {/* Para pantallas pequeñas */}
           <img
             src={images.LogoSmall}
             alt="Logo Vivví Small"
-            className="h-4 md:hidden"
-          />
-          {/* Para pantallas grandes */}
-          <img
-            src={images.Logo}
-            alt="Logo Vivví"
-            className="hidden md:block h-10"
+            className="h-6 sm:h-8 md:h-10"
           />
         </Link>
         <div className="text-white z-50 visible lg:hidden">

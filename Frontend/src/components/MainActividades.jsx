@@ -1,59 +1,74 @@
-import React from "react";
 import images from "../constants/images";
+import ButtonComponent from "./ButtonComponent";
 import CardComponent from "./CardComponent";
 
 const MainActividades = () => {
   return (
-    <section className="container mx-auto flex flex-col px-10 py-5 lg:flex-row">
-      <div className="bg-secondary grid grid-cols-5 md:grid-cols-9 m-auto gap-5">
-        {/* Titulo y desc */}
-        <div className="col-span-5 md:col-span-4 flex flex-col justify-between">
-          <div>
-            <h1 className="font-extrabold text-white text-4xl md:text-5xl lg:text-6xl text-center md:text-left">
-              Vi<span className="text-primary">vv</span>í{" "}
-              <span className="text-[1.8rem] md:text-4xl lg:text-[2.68rem]">
-                NUEVAS EXPERIENCIAS
-              </span>
-            </h1>
-            <p className="text-center text-white my-4 md:text-xl lg:text-2xl xl:text-xl md:text-left">
-              ¿Listo para vivir una experiencia inolvidable? <br /> Reserva tu
-              próxima actividad de forma rápida, sencilla y segura.
-            </p>
-          </div>
-          <div>
-            <img src={images.hero} alt="" />
-          </div>
+    <section className="py-5 flex flex-col gap-5">
+      <div className="flex flex-col gap-5 md:grid md:grid-cols-9">
+        <div className="md:col-span-4">
+          <h1 className="font-extrabold text-white text-4xl md:text-5xl lg:text-6xl text-center md:text-left md:row-span-2">
+            Vi<span className="text-primary">vv</span>í{" "}
+            <span className="text-[1.8rem] md:text-4xl lg:text-[2.68rem]">
+              NUEVAS EXPERIENCIAS
+            </span>
+          </h1>
+          <p className="row-span-1 text-center text-white my-4 md:text-lg lg:text-xl md:text-left">
+            ¿Listo para vivir una experiencia inolvidable? <br /> Reserva tu
+            próxima actividad de forma rápida, sencilla y segura.
+          </p>
         </div>
-
-        {/* Primer Banner */}
-        <div className="col-span-5 flex w-full">
+        <div className="md:col-span-5">
           <CardComponent
             img={images.DummyImg}
-            categoria="Categoría"
-            precio="1000"
-            currency="USD"
-            titulo="Título demasiado largo larguisimo para probar el responsive de la tarjeta de actividades"
-            proveedor="Proveedor Ejemplo"
+            category="Culinario"
+            price="15000"
+            currency="$"
+            title="Visita Guiada a Bodega Garzón + Cata de Vino"
+            desc="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam"
           />
         </div>
-        <div className="col-span-5 lg:col-span-4 grid columns-2 gap-5 w-full">
-          <div className="flex gap-5">
+      </div>
+      <div className="flex flex-col gap-5 md:grid md:grid-cols-9">
+        <div className="md:col-span-4 flex flex-col gap-5">
+          <ButtonComponent text="VER MÁS ACTIVIDADES" />
+          <div className="md:min-h-[20rem] lg:min-h-[50vh]">
             <CardComponent
-              img={images.DummyImg2}
-              categoria="Categoría"
-              precio="1000"
+              img={images.DummyImg5}
+              category="Espectáculo"
+              price="1400"
+              currency="$"
+              title="Evento en Teatro Solís"
+              desc="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam"
+            />
+          </div>
+        </div>
+        <div className="md:col-span-5 flex flex-col gap-5">
+          <div className="flex flex-col md:grid gap-5 h-full md:grid-cols-2 md:grid-rows-2">
+            <CardComponent
+              img={images.DummyImg4}
+              category="Turismo"
+              price="200"
               currency="USD"
-              titulo="Prueba tarjeta chica corto"
-              proveedor="Proveedor Ejemplo"
+              title="Paseo por Colonia"
+              desc="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam"
             />
             <CardComponent
               img={images.DummyImg2}
-              categoria="Categoría"
-              precio="1000"
-              currency="USD"
-              titulo="Prueba tarjeta chica corto"
-              proveedor="Proveedor Ejemplo"
+              category="Turismo"
+              title="Tour con Guía por Punta del Este"
+              desc="Lorem ipsum dolor sit amet consectetur adipisicing elit. QuisquamelitQuisquamelit Quisquamelit. Hola 123 1234 12345"
             />
+            <div className="col-span-2">
+              <CardComponent
+                img={images.DummyImg3}
+                category="Turismo"
+                price="2300"
+                currency="$"
+                title="Paseo por Casapueblo"
+                desc="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam"
+              />
+            </div>
           </div>
         </div>
       </div>

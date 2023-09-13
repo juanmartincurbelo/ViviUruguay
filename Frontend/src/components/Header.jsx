@@ -85,7 +85,7 @@ const Header = () => {
 
   return (
     <section className="sticky top-0 left-0 right-0 z-50 bg-secondary">
-      <header className="container mx-auto flex justify-between py-4 px-10 items-center">
+      <header className="flex justify-between py-4 items-center">
         <Link to={"/"}>
           <img
             src={images.LogoSmall}

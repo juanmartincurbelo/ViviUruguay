@@ -82,3 +82,29 @@ error: Failed to authorize event. Event not found. {"status":404,"timestamp":"20
 error: Failed to authorize event. Cannot read properties of null (reading 'name') {"timestamp":"2023-08-30T18:30:32.351Z","userType":"Admin"}
 error: Failed to authorize event. Cannot read properties of null (reading 'name') {"timestamp":"2023-08-30T18:30:35.397Z","userType":"Admin"}
 error: Failed to authorize event. Cannot read properties of null (reading 'name') {"timestamp":"2023-08-30T18:30:36.504Z","userType":"Admin"}
+error: Failed to create event. Event name already exists. {"status":400,"timestamp":"2023-09-12T16:29:05.511Z","userType":"Provider"}
+error: Failed to create event. Event name already exists. {"status":400,"timestamp":"2023-09-12T16:29:30.725Z","userType":"Provider"}
+error: Failed to create event. Event name already exists. {"status":400,"timestamp":"2023-09-12T16:30:36.994Z","userType":"Provider"}
+error: Failed to create event. Event name already exists. {"status":400,"timestamp":"2023-09-12T16:31:29.703Z","userType":"Provider"}
+error: Failed to create event. Event name already exists. {"status":400,"timestamp":"2023-09-12T16:32:35.311Z","userType":"Provider"}
+error: Failed to create event. Event name already exists. {"status":400,"timestamp":"2023-09-12T16:32:42.827Z","userType":"Provider"}
+error: Failed to create event. Event name already exists. {"status":400,"timestamp":"2023-09-12T16:32:44.053Z","userType":"Provider"}
+error: Failed to create event. Event name already exists. {"status":400,"timestamp":"2023-09-12T16:32:51.359Z","userType":"Provider"}
+error: Failed to create event. Event name already exists. {"status":400,"timestamp":"2023-09-12T16:32:52.465Z","userType":"Provider"}
+error: Failed to create event. Event name already exists. {"status":400,"timestamp":"2023-09-12T16:33:54.879Z","userType":"Provider"}
+error: Failed to create event. Event name already exists. {"status":400,"timestamp":"2023-09-12T16:34:12.109Z","userType":"Provider"}
+error: Failed to create event. Event name already exists. {"status":400,"timestamp":"2023-09-12T16:34:15.738Z","userType":"Provider"}
+error: Failed to create event. Event name already exists. {"status":400,"timestamp":"2023-09-12T16:34:44.164Z","userType":"Provider"}
+error: Failed to create event. Event name already exists. {"status":400,"timestamp":"2023-09-12T16:35:21.870Z","userType":"Provider"}
+error: Failed to create event. Event name already exists. {"status":400,"timestamp":"2023-09-12T16:35:32.956Z","userType":"Provider"}
+error: Failed to create event. Event name already exists. {"status":400,"timestamp":"2023-09-12T16:35:37.298Z","userType":"Provider"}
+error: Failed to create event. Event name already exists. {"status":400,"timestamp":"2023-09-12T16:35:42.223Z","userType":"Provider"}
+error: Failed to create event. Event name already exists. {"status":400,"timestamp":"2023-09-12T16:35:43.594Z","userType":"Provider"}
+error: Failed to create event. Event name already exists. {"status":400,"timestamp":"2023-09-12T16:35:48.859Z","userType":"Provider"}
+error: Failed to create event. Event name already exists. {"status":400,"timestamp":"2023-09-12T16:35:50.848Z","userType":"Provider"}
+error: Failed to create event. There are missing files. Please upload all files. {"status":400,"timestamp":"2023-09-12T16:36:50.073Z","userType":"Provider"}
+error: Failed to create event. There are missing files. Please upload all files. {"status":400,"timestamp":"2023-09-12T16:36:59.811Z","userType":"Provider"}
+error: Failed to create event. There are missing files. Please upload all files. {"status":400,"timestamp":"2023-09-12T16:37:19.088Z","userType":"Provider"}
+error: Failed to create event. There are missing files. Please upload all files. {"status":400,"timestamp":"2023-09-12T16:37:34.018Z","userType":"Provider"}
+error: Failed to create event. There are missing files. Please upload all files. {"status":400,"timestamp":"2023-09-12T16:38:30.841Z","userType":"Provider"}
+error: Failed to create event. There are missing files. Please upload all files. {"status":400,"timestamp":"2023-09-12T16:39:27.324Z","userType":"Provider"}

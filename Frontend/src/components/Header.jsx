@@ -84,8 +84,8 @@ const Header = () => {
   };
 
   return (
-    <section className="sticky top-0 left-0 right-0 z-50 bg-secondary">
-      <header className="flex justify-between py-4 items-center">
+    <section className="container mx-auto px-10 md:px-16 lg:px-32 sticky top-0 left-0 right-0 z-50 bg-secondary">
+      <header className=" flex justify-between py-4 items-center">
         <Link to={"/"}>
           <img
             src={images.LogoSmall}

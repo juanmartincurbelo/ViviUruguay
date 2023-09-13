@@ -25,12 +25,12 @@ const createEvent = async (eventData, files) => {
     event.receivers = [];
     const finalEvent = await addFilesInfo(event, files);
     const user = await providerRepository.getProvider(eventData.provider_id);
-    console.log("hola");
-    const savedEvent = await providerRepository.createEvent(finalEvent, user.defaultPrice);
+    const savedEvent = await providerRepository.createEvent(finalEvent);
     const logEntry = createLogEntry("Event creation", user)
     logger.application(logEntry);
     return savedEvent;
   } catch (error) {
+    console.log(error);
     logger.error("Failed to create event.", { message: error.message, status: error.status, userType: 'Provider' });
     deleteDirectoryAndFiles(files);
     throw new EventError(error.status, error.message);
@@ -253,8 +253,8 @@ const addFilesInfo = (event, files) => {
   try {
     event.previewImage = files.previewImage[0].filename;
     event.image1 = files.image1[0].filename;
-    event.image2 = files.image1[0].filename;
-    event.image3 = files.image1[0].filename;
+    event.image2 = files.image2[0].filename;
+    event.image3 = files.image3[0].filename;
     event.filesRoute = files.previewImage[0].destination;
     return event;
   } catch (error) {
@@ -319,8 +319,8 @@ const validateEventName = async (name) => {
 };
 
 const validateEventFields = (event, files) => {
-  const { name, previewDescription, description, soldTickets, priority } = event;
-  if (!name || !previewDescription || !description || !soldTickets || !priority) {
+  const { name, previewDescription, description, location, category, price, currencySymbol, soldTickets, priority } = event;
+  if (!name || !previewDescription || !description || !soldTickets || !priority || !location || !category || !price || !currencySymbol) {
     throw new BadRequestError("There are missing fields. Please fill all fields.");
   }
   if (!files.previewImage || !files.image1 || !files.image2 || !files.image3 || !files) {

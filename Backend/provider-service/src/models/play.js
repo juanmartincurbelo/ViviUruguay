@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const playsSchema = new mongoose.Schema({
+const playSchema = new mongoose.Schema({
     date: {
         type: Date,
         required: true,
@@ -11,14 +11,16 @@ const playsSchema = new mongoose.Schema({
             message: 'Date must be greater than the current date.'
         }
     },
-    maxTickets: {
+    ticketsAvailable: {
         type: Number,
     },
-    minimum: {
-        type: Number,
-    },
+    eventId: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Event',
+        index: true,
+    }
 });
 
-const Plays = mongoose.model('Plays', playsSchema);
+const Play = mongoose.model('Play', playSchema);
 
-module.exports = Plays;
+module.exports = Play;

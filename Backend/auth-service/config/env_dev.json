@@ -1,0 +1,13 @@
+{
+    "app": {
+        "port": "3002",
+        "address": "http://localhost:3002/"
+    },
+    "jwt_config": {
+        "expiration_in_mins": 3600
+    },
+    "mongo": {
+        "address": "mongodb://localhost:27017/database",
+        "db_name": "database"
+    }
+}

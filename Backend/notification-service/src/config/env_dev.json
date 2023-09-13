@@ -1,0 +1,17 @@
+{
+    "app": {
+        "port": "3007",
+        "address": "http://localhost:3007/"
+    },
+    "redis": {
+        "queue_read_channel": "notifications",
+        "host": "127.0.0.1",
+        "port": "6379",
+        "event_data_queue": "event_data_queue",
+        "done_purchases_queue": "done_purchases_queue",
+        "failed_purchases_queue": "failed_purchases_queue",
+        "check_authorized_queue": "check_authorized_queue",
+        "deauthorization_queue": "deauthorization_queue",
+        "authorization_queue": "authorization_queue"
+    }
+}

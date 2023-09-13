@@ -1,0 +1,25 @@
+{
+  "app": {
+    "port": "3000",
+    "address": "http://localhost:3000/"
+  },
+  "mongo": {
+    "address": "mongodb://localhost:27017/database",
+    "db_name": "database"
+  },
+  "redis": {
+    "queue_read_channel": "admins",
+    "host": "127.0.0.1",
+    "port": "6379",
+    "deauthorization_queue": "deauthorization_queue",
+    "authorization_queue": "authorization_queue"
+  },
+  "auth_service": {
+    "generate_address": "http://localhost:3002/api/tokens/generate",
+    "verify_address": "http://localhost:3002/api/tokens/verify"
+  },
+  "application_log": {
+    "path": "./../../../Logs/application.log"
+  },
+  "client_address": "http://localhost:3003/"
+}

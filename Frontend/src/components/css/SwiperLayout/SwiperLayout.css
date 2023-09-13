@@ -1,0 +1,15 @@
+
+.customSwiper {
+    overflow: visible;
+}
+.customSwiper .swiper-button-next, .customSwiper .swiper-button-prev {
+    color: white;
+}
+
+.customSwiper .swiper-button-next:after, .customSwiper .swiper-button-prev:after {
+    font-size: 30px;
+}
+
+.customSwiper .swiper-pagination-bullet {
+    background: white;
+  }

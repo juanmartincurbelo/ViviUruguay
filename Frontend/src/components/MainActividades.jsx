@@ -4,7 +4,7 @@ import CardComponent from "./CardComponent";
 
 const MainActividades = () => {
   return (
-    <section className="py-5 flex flex-col gap-5">
+    <section className="py-5 flex flex-col gap-5 container mx-auto px-10 md:px-16 lg:px-32">
       <div className="flex flex-col gap-5 md:grid md:grid-cols-9">
         <div className="md:col-span-4">
           <h1 className="font-extrabold text-white text-4xl md:text-5xl lg:text-6xl text-center md:text-left md:row-span-2">

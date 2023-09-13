@@ -4,9 +4,9 @@ const Event = require('../models/event');
 const mongoose = require('mongoose');
 const { ObjectId } = mongoose.Types;
 
-const createEvent = async (eventData, defaultPrice) => {
+const createEvent = async (eventData) => {
   try {
-    const newEvent = new Event({ ...eventData, price: defaultPrice });
+    const newEvent = new Event({ ...eventData });
     const savedEvent = await newEvent.save();
     return savedEvent;
   } catch (error) {

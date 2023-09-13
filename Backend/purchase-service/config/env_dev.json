@@ -1,0 +1,25 @@
+{
+    "app": {
+        "port": "3009",
+        "address": "http://localhost:3009/"
+    },
+    "mongo": {
+        "address": "mongodb://localhost:27017/database",
+        "db_name": "database"
+    },
+    "redis": {
+        "queue_read_channel": "purchases",
+        "host": "127.0.0.1",
+        "port": "6379",
+        "pending_purchases_queue": "pending_purchases_queue",
+        "done_purchases_queue": "done_purchases_queue",
+        "failed_purchases_queue": "failed_purchases_queue"
+    },
+    "auth_service": {
+        "address": "http://localhost:3002/api/purchases/",
+        "purchase_address": "http://localhost:3002/api/purchases"
+    },
+    "payment_gateway": {
+        "address": "http://localhost:3004/api/payments"
+    }
+}

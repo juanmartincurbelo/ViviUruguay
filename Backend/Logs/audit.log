@@ -1,0 +1,25 @@
+info: Authorized access to the system by user with email 'admin@example.com'. {"timestamp":"2023-08-08T19:16:05.982Z","userType":"Admin"}
+info: Authorized access to the system by user with email 'juanmacurbe@gmail.com'. {"timestamp":"2023-08-08T19:16:23.198Z","userType":"Provider"}
+info: Authorized access to the system by user with email 'admin@example.com'. {"timestamp":"2023-08-08T19:28:41.448Z","userType":"Admin"}
+info: Authorized access to the system by user with email 'juanmacurbe@gmail.com'. {"timestamp":"2023-08-08T19:28:45.331Z","userType":"Provider"}
+info: Authorized access to the system by user with email 'admin@example.com'. {"timestamp":"2023-08-08T19:35:49.392Z","userType":"Admin"}
+info: Authorized access to the system by user with email 'juanmacurbe@gmail.com'. {"timestamp":"2023-08-08T19:36:16.410Z","userType":"Provider"}
+info: Authorized access to the system by user with email 'admin@example.com'. {"timestamp":"2023-08-08T19:58:48.253Z","userType":"Admin"}
+info: Authorized access to the system by user with email 'juanmacurbe@gmail.com'. {"timestamp":"2023-08-08T20:28:59.833Z","userType":"Provider"}
+info: Unauthorized action attempt by a user who is not an Admin. {"timestamp":"2023-08-08T20:29:21.981Z"}
+info: Authorized access to the system by user with email 'admin@example.com'. {"timestamp":"2023-08-08T20:32:28.957Z","userType":"Admin"}
+info: Authorized access to the system by user with email 'admin@example.com'. {"timestamp":"2023-08-08T20:32:37.717Z","userType":"Admin"}
+info: Authorized access to the system by user with email 'juanmacurbe@gmail.com'. {"timestamp":"2023-08-09T18:09:21.154Z","userType":"Provider"}
+info: Authorized access to the system by user with email 'juanmacurbe@gmail.com'. {"timestamp":"2023-08-09T18:25:12.210Z","userType":"Provider"}
+info: Authorized access to the system by user with email 'admin@example.com'. {"timestamp":"2023-08-09T18:25:26.498Z","userType":"Admin"}
+info: Authorized access to the system by user with email 'juanmacurbe@gmail.com'. {"timestamp":"2023-08-09T18:29:35.106Z","userType":"Provider"}
+info: Authorized access to the system by user with email 'admin@example.com'. {"timestamp":"2023-08-09T18:35:41.624Z","userType":"Admin"}
+info: Authorized access to the system by user with email 'juanmacurbe@gmail.com'. {"timestamp":"2023-08-09T18:36:13.404Z","userType":"Provider"}
+info: Authorized access to the system by user with email 'admin@example.com'. {"timestamp":"2023-08-09T18:36:42.016Z","userType":"Admin"}
+info: Authorized access to the system by user with email 'admin@example.com'. {"timestamp":"2023-08-09T18:40:06.615Z","userType":"Admin"}
+info: Authorized access to the system by user with email 'juanmacurbe@gmail.com'. {"timestamp":"2023-08-09T18:40:18.634Z","userType":"Provider"}
+info: Authorized access to the system by user with email 'juanmacurbe@gmail.com'. {"timestamp":"2023-08-30T16:39:59.512Z","userType":"Provider"}
+info: Authorized access to the system by user with email 'juanmacurbe@gmail.com'. {"timestamp":"2023-08-30T17:40:29.384Z","userType":"Provider"}
+info: Authorized access to the system by user with email 'admin@example.com'. {"timestamp":"2023-08-30T18:30:11.760Z","userType":"Admin"}
+info: Authorized access to the system by user with email 'juanmacurbe@gmail.com'. {"timestamp":"2023-08-30T18:32:09.180Z","userType":"Provider"}
+info: Authorized access to the system by user with email 'juanmacurbe@gmail.com'. {"timestamp":"2023-09-12T16:29:03.414Z","userType":"Provider"}

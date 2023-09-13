@@ -11,7 +11,7 @@ import { Link } from "react-router-dom";
 function Footer() {
   return (
     <footer className="bg-detail shadow">
-      <div className="w-full max-w-screen-xl mx-auto p-10 md:py-8">
+      <div className="w-full max-w-screen-xl mx-auto px-10 md:px-16 lg:px-32 md:py-8">
         <div className="sm:flex sm:items-center sm:justify-between">
           <Link to="/" className="flex items-center mb-4 sm:mb-0 mr-6">
             <img src={images.Logo} className="h-8 mr-3" alt="Vivví Logo" />

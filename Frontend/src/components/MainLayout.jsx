@@ -3,9 +3,11 @@ import Footer from "./Footer";
 const MainLayout = ({ children }) => {
   return (
     <>
-      <Header />
-      {children}
-      <Footer />
+      <div className="container mx-auto px-10 md:px-16 lg:px-32 ">
+        <Header />
+        {children}
+      </div>
+        <Footer />
     </>
   );
 };
